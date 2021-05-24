@@ -2,6 +2,7 @@
 As part of researching computational biology state-of-the-art methodologies during my Master's Thesis, I was tasked with implementing an open-source library published by Oxford University to assess its potential at modelling microfluidic cell culture experiments designed to mimic actual in-vivo blood vessel growth process.
 
 The specific framework that I focused on was Microvessel Chaste (https://jmsgrogan.github.io/MicrovesselChaste/) for spatial modelling of vascularized tissues. The object-oriented Python library allows for custom agent-based models to be created by interfacing established linear algebra and ODE solvers with powerful visualization packages. 
+
 ![image](https://user-images.githubusercontent.com/26292532/119268967-45437e00-bbc3-11eb-9e31-78975cbcbea6.png)
 
 I implemented an off-lattice model, which in contrast to the classical cell-automaton models, does not use a discrete grid and is derived from the equation of motion and uses chemical gradients as the driving force of motion. The goal was to focus on a single interconnecting channel in the middle of the microfluidic device (please see below) which on the left-end (blue) would contain cells representative of a blood vessel and chemicals representative of tumours on the right-end (red).
