@@ -8,6 +8,6 @@ I implemented an off-lattice model, which in contrast to the classical cell-auto
 
 ![image](https://user-images.githubusercontent.com/26292532/119289760-2e2f7b00-bc19-11eb-82a9-f11bd608befb.png)
 
-The model was able to generate realistic blood vessel networks (as illustrated below) but due to fixed assumptions around in-vivo environment did not allow us to customize it specifically to intricate microfluidic environements. As the result, I wrote custom differential system of equations model and used actaul experiment data to enable researchers to identify optimal microfluidic device dimensions and chemical concentrations in order to reduce costs and improve the quality of their cell culture experiments.
+The model was able to generate realistic blood vessel networks (as illustrated below) but due to fixed assumptions around in-vivo environment did not allow us to customize it specifically to intricate microfluidic environements. As the result, I wrote custom differential system of equations model and used actaul experiment data to enable researchers to identify optimal microfluidic device dimensions and chemical concentrations in order to reduce costs and improve the quality of experimental results.
 
 ![image](https://user-images.githubusercontent.com/26292532/119268974-52606d00-bbc3-11eb-8f9a-74629cae8df8.png)
