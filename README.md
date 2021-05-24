@@ -1,10 +1,13 @@
-# Agent-based-modelling
-The blood vessel growth models are built using Microvessel Chaste (https://jmsgrogan.github.io/MicrovesselChaste/) open library for spatial modelling of vascularized tissues. The library allows for custom agent-based models to be created by interfacing established parallel linear algebra, ODE solvers, and visualization packages. 
+# Blood vessel growth in Tumour environements simulations
+As part of researching computational biology state-of-the-art methodologies during my Master's Thesis, I was tasked with implmenting an open-source library published by Oxford University to assess its potential at modelling microfluidic cell culture experiments designed to mimic actual in-vivo blood vessel growth process.
+
+The specific framework that I focused on was Microvessel Chaste (https://jmsgrogan.github.io/MicrovesselChaste/) for spatial modelling of vascularized tissues. The library allows for custom agent-based models to be created by interfacing established linear algebra and ODE solvers with powerful visualization packages. 
 ![image](https://user-images.githubusercontent.com/26292532/119268967-45437e00-bbc3-11eb-9e31-78975cbcbea6.png)
 
-Our models are of the off-lattice type, which in contrast to the classical cell-automaton models do not use a discrete grid and are derived from the equation of motion (m_i*r_i''=-c*r_i'+sum(F_ij)), where each cell is initially assigned an initial r_i position, the guiding force F_ij from the neighbouring sites is a function of tumour growth factor gradient and cellular states, and diffusion of tumour growth factor is modelled by a steady-state diffusion equation. 
+I implemented an off-lattice model, which in contrast to the classical cell-automaton models, does not use a discrete grid and is derived from the equation of motion and uses chemical gradients as the driving force of motion. The goal was to focus on a single interconnecting channel of the microfluidic device (Please see below) which on one end would contain cells representative of a blood vessel and chemicals representative of tumours on the other end.
 
-We assume that viscous forces dominate inertial forces and approximate the system as the first-order (c*r_i'=sum(F_ij)) which enables us to solve the system using the forward Euler scheme and solve for the cell position r_i(t) as follows: 
-r_i(t_n+1)=r_(i)+(dt/c)*(sum(F_ij)).
+![image](https://user-images.githubusercontent.com/26292532/119289760-2e2f7b00-bc19-11eb-82a9-f11bd608befb.png)
+
+The model was able to provide realistic blood vessel networks (as illustrated below) but due to fixed assumptions around in-vivo environment did not allow us to customize it specifically to intricate microfluidic environement. As the result, I wrote custom differential system of equations model and used actaul experiment data to enable researchers to identify optimal microfluidic device dimensions and chemical concentrations in order to reduce time & costs and improve the quality of the results. 
 
 ![image](https://user-images.githubusercontent.com/26292532/119268974-52606d00-bbc3-11eb-8f9a-74629cae8df8.png)
