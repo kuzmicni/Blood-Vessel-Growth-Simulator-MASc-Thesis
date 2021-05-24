@@ -1,4 +1,4 @@
-# Blood vessel growth in Tumour environements simulations
+# Simulation of Blood vessel growth in Tumour environements
 As part of researching computational biology state-of-the-art methodologies during my Master's Thesis, I was tasked with implmenting an open-source library published by Oxford University to assess its potential at modelling microfluidic cell culture experiments designed to mimic actual in-vivo blood vessel growth process.
 
 The specific framework that I focused on was Microvessel Chaste (https://jmsgrogan.github.io/MicrovesselChaste/) for spatial modelling of vascularized tissues. The library allows for custom agent-based models to be created by interfacing established linear algebra and ODE solvers with powerful visualization packages. 
